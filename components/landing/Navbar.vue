@@ -38,7 +38,7 @@ const open = ref(false);
                 class="flex w-full lg:w-auto items-center justify-between font-semibold"
             >
                 <a href="/" class="text-lg logo-text"
-                    ><span class="font-bold text-slate-800">Kof</span
+                    ><span class="font-bold text-purple-800">Kof</span
                     ><span class="text-slate-500">workshop</span>
                 </a>
                 <div class="block lg:hidden">
