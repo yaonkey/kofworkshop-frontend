@@ -1,11 +1,16 @@
 <template>
   <div>
-    
+
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup>
+  definePageMeta({
+    layout: "landing",
+  });
+  onMounted(() => {
 
+  })
 </script>
 
 <style>

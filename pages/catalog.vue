@@ -1,79 +1,31 @@
 <script setup>
 definePageMeta({
-  layout: "landing",
+    layout: "landing",
 });
 
-const pricing = [
-  {
-    name: "Personal",
-    price: "Free",
-    popular: false,
-    features: [
-      "Lifetime free",
-      "Up to 3 users",
-      "Unlimited Pages",
-      "Nuxt Sub domain",
-      "Basic Integrations",
-      "Community Support",
-    ],
-    button: {
-      text: "Get Started",
-      link: "/",
+const products = [
+    {
+        title: "Аксолотль",
+        image: "/assets/img/hero.png",
+        price: "350",
+        description: "Да-да",
+        link: "/",
+        type: "toy",
     },
-  },
-  {
-    name: "Startup",
-    price: {
-      monthly: "$19",
-      annual: "$16",
-      discount: "10%",
-      original: "$24",
-    },
-    popular: true,
-    features: [
-      "All Free Features",
-      "Up to 20 users",
-      "20 Custom domains",
-      "Unlimited Collaborators",
-      "Advanced Integrations",
-      "Priority Support",
-    ],
-    button: {
-      text: "Get Started",
-      link: "#",
-    },
-  },
-  {
-    name: "Enterprise",
-    price: "Custom",
-    popular: false,
-    features: [
-      "All Pro Features",
-      "Unlimited Custom domains",
-      "99.99% Uptime SLA",
-      "SAML & SSO Integration",
-      "Dedicated Account Manager",
-      "24/7 Phone Support",
-    ],
-    button: {
-      text: "Contact us",
-      link: "/contact",
-    },
-  },
 ];
 </script>
 
 <template>
-  <LandingContainer>
-    <LandingSectionhead>
-      <template v-slot:title>Игрушки</template>
-      <template v-slot:desc
-        >Здесь монжо заказать игрушку Вам по душе.</template
-      >
-    </LandingSectionhead>
+    <LandingContainer>
+        <LandingSectionhead>
+            <template v-slot:title>Игрушки</template>
+            <template v-slot:desc
+                >Здесь можно заказать игрушку Вам по душе.</template
+            >
+        </LandingSectionhead>
 
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
-      <LandingPricing v-for="item of pricing" :plan="item" />
-    </div>
-  </LandingContainer>
+        <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
+            <LandingProduct v-for="product of products" :product="product" />
+        </div>
+    </LandingContainer>
 </template>
