@@ -20,6 +20,10 @@ const menuitems = [
         title: "О нас",
         path: "/about",
     },
+    {
+        title: "Доставка",
+        path: "/delivery",
+    },
 ];
 
 const open = ref(false);
@@ -33,7 +37,7 @@ const open = ref(false);
             <div
                 class="flex w-full lg:w-auto items-center justify-between font-semibold"
             >
-                <a href="/" class="text-lg"
+                <a href="/" class="text-lg logo-text"
                     ><span class="font-bold text-slate-800">Kof</span
                     ><span class="text-slate-500">workshop</span>
                 </a>
