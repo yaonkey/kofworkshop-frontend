@@ -1,12 +1,9 @@
 <template>
     <footer
-        class="flex flex-col lg:flex-row justify-between items-center rounded-lg m-4 bg-white"
+        class="flex flex-col overflow-hidden mt-8 items-center bg-black w-full bottom-0 relative"
     >
-        <div
-            class="w-full lg:w-auto mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-content"
-        >
-            <span
-                class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+        <div class="w-auto mx-auto max-w-screen-xl p-4">
+            <span class="text-sm text-gray-400"
                 >© {{ new Date().getFullYear() }}
                 <a href="/" class="hover:underline">Kofworkshop</a>. Все права
                 защищены. Made by

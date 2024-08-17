@@ -1,3 +1,9 @@
-<script setup></script>
+<script setup>
+definePageMeta({
+    layout: "landing",
+});
+</script>
 
-<template></template>
+<template>
+    <LandingContainer> </LandingContainer>
+</template>

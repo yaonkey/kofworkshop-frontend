@@ -9,12 +9,16 @@ const menuitems = [
         path: "/blog",
     },
     {
-        title: "О нас",
-        path: "/about",
-    },
-    {
         title: "Доставка",
         path: "/delivery",
+    },
+    {
+        title: "Контакты",
+        path: "/contacts",
+    },
+    {
+        title: "О нас",
+        path: "/about",
     },
 ];
 
@@ -29,7 +33,7 @@ const open = ref(false);
             <div
                 class="flex w-full lg:w-auto items-center justify-between font-semibold"
             >
-                <a href="/" class="text-lg logo-text"
+                <a href="/" class="text-3xl lg:text-2xl logo-text"
                     ><span class="font-bold text-purple-800">Kof</span
                     ><span class="text-slate-500">workshop</span>
                 </a>
@@ -37,7 +41,7 @@ const open = ref(false);
                     <button @click="open = !open" class="text-gray-800">
                         <svg
                             fill="currentColor"
-                            class="w-4 h-4"
+                            class="w-6 h-6"
                             viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg"
                         >
