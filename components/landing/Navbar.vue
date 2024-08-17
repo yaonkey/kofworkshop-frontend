@@ -1,16 +1,8 @@
 <script setup>
 const menuitems = [
     {
-        title: "Игрушки",
+        title: "Каталог",
         path: "/catalog",
-    },
-    {
-        title: "Схемы",
-        path: "/schemas",
-    },
-    {
-        title: "Брелки",
-        path: "/trinkets",
     },
     {
         title: "Блог",
@@ -92,9 +84,6 @@ const open = ref(false);
                 <div class="hidden lg:flex items-center gap-4">
                     <a href="#">Вход</a>
                     <LandingLink href="#" size="md">Регистрация</LandingLink>
-                    <LandingLink href="#" styleName="muted" block size="md"
-                        >Попа</LandingLink
-                    >
                 </div>
             </div>
         </header>
