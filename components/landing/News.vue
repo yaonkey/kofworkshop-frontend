@@ -13,10 +13,11 @@
                 <div
                     class="flex flex-col w-full order-first lg:order-none border-2 border-[#D8DEE9] border-opacity-50 py-5 px-6 rounded-md"
                 >
-                    <img
+                    <NuxtImg
                         class="rounded-full transition-transform transform hover:scale-125"
-                        src="~/assets/img/hero.png"
+                        src="/img/hero.png"
                         alt="Kofworkshop icon"
+                        :placeholder="img(`/loading.svg`, { q: 10, h: 10 })"
                         loading="eager"
                         format="avif"
                         width="512"
@@ -50,6 +51,10 @@
 </template>
 
 <script lang="ts" setup>
+import { useImage } from "#imports";
+
+let img = useImage();
+
 const news = [
     {
         id: 1,
