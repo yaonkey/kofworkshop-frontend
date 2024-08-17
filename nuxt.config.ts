@@ -38,5 +38,5 @@ export default defineNuxtConfig({
         },
       },
     },
-  ], "@nuxt/fonts"],
+  ], "@nuxt/fonts", "@nuxt/image"],
 });
