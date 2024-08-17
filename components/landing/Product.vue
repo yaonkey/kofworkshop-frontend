@@ -5,35 +5,65 @@ defineProps(["product"]);
 <template>
     <div>
         <div
-            class="flex flex-col w-full order-first lg:order-none border-2 border-[#D8DEE9] border-opacity-50 py-5 px-6 rounded-md"
+            class="h-full flex flex-col w-full order-first lg:order-none border-2 border-[#D8DEE9] border-opacity-50 py-6 px-7 rounded-md gap-4"
         >
             <div class="text-center">
-                <h4 class="text-lg font-medium text-black text-bold">
-                    {{ product.title ?? "Без названия" }}
+                <h4 class="text-xl text-black">
+                    <span class="font-bold">{{
+                        product.title ?? "Без названия"
+                    }}</span>
+                    <span
+                        class="text-red-400 font-semibold"
+                        v-if="product.old_price !== undefined"
+                    >
+                        (-{{
+                            parseInt(
+                                100 - product.price / (product.old_price / 100),
+                            )
+                        }}%)</span
+                    >
                 </h4>
-                <div class="flex sm:w-40 items-center">
-                    <img
-                        class="rounded-full"
-                        :src="product.image"
-                        :alt="product.title"
+                <div
+                    class="mt-4 flex w-full border-2 rounded-xl border-none items-center justify-center content-center"
+                >
+                    <NuxtImg
+                        class="rounded-md"
                         loading="eager"
+                        width="256px"
+                        height="256px"
+                        :src="product.image"
                         format="avif"
-                        width="256"
-                        height="256"
                     />
                 </div>
-                <p class="mt-3 text-4xl font-medium text-gray-500 md:text-4xl">
-                    {{
-                        product.price && product.price !== 0
-                            ? product.price + " руб."
-                            : "Бесплатно"
-                    }}
+                <p
+                    class="mt-2 text-lg font-medium text-gray-600 flex justify-end gap-2 flex-wrap items-end text-end"
+                >
+                    <span
+                        v-if="product.old_price !== undefined"
+                        class="line-through text-red-400"
+                    >
+                        {{ product.old_price }} руб
+                    </span>
+                    <span>
+                        {{
+                            product.price && product.price !== 0
+                                ? product.price + " руб"
+                                : "Бесплатно"
+                        }}
+                    </span>
                 </p>
             </div>
-            <div class="w-full font-normal text-gray-400">
-                {{ product.description ?? "Без описания" }}
+            <div class="h-full w-full font-normal text-gray-400">
+                <span v-if="typeof product.description == 'string'">{{
+                    product.description
+                }}</span>
+                <span
+                    v-if="typeof product.description == 'object'"
+                    v-for="idx in 2"
+                    >{{ product.description[idx] }}<br />
+                </span>
             </div>
-            <div class="flex mt-8">
+            <div class="flex mt-2 w-max md:w-full">
                 <LandingLink :href="product.link || '#'" block>
                     {{ product.type !== "schema" ? "Заказать" : "Приобрести" }}
                 </LandingLink>
