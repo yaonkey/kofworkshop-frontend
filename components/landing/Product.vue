@@ -1,5 +1,6 @@
 <script setup>
 defineProps(["product"]);
+let img = useImage();
 </script>
 
 <template>
@@ -33,6 +34,7 @@ defineProps(["product"]);
                         height="256px"
                         :src="product.image"
                         format="avif"
+                        :placeholder="img(`/loading.svg`, { q: 10, h: 10 })"
                     />
                 </div>
                 <p

@@ -1,14 +1,15 @@
 <template>
     <main class="flex lg:flex-cols-2 place-items-center pt-16 pb-8 md:pt-8">
         <div class="p-24 md:order-1 hidden md:block">
-            <img
+            <NuxtImg
                 class="rounded-full transition-transform transform hover:scale-150 scale-125"
-                src="~/assets/img/hero.png"
+                src="/img/hero.png"
                 alt="Kofworkshop icon"
                 loading="eager"
                 format="avif"
                 width="512"
                 height="512"
+                placeholder="/loading.svg"
             />
         </div>
 

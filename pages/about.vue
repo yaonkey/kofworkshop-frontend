@@ -3,6 +3,8 @@ definePageMeta({
     layout: "landing",
 });
 
+const img = useImage();
+
 const TeamImg1 =
     "https://sun1-23.userapi.com/s/v1/ig2/Q_vOMeG5Ei4gbRbdKKLLOM_9S-X28vn2f2pdNw9bTb3PM1fz9epfeoUkIAyo2VqVfnPRTPN6doW9WucliuNJ1m3j.jpg?quality=95&crop=325,6,1905,1905&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1280,1440x1440&ava=1&u=0bnIzkqDOZMkLsIUylxg_O24e858oPHp8oC-1ZyO1Wo&cs=200x200";
 const TeamImg2 =
@@ -60,10 +62,10 @@ const team = [
             class="flex-wrap items-center justify-center gap-10 mx-auto max-w-4xl mt-12 flex"
         >
             <div v-for="item of team" class="group border-b-black border-b-2">
-                <div class="w-full aspect-square">
+                <div class="w-full aspect-square h-full">
                     <NuxtImg
                         :src="item.avatar.src"
-                        placeholder="Загрузка"
+                        placeholder="/loading.svg"
                         width="256px"
                         height="256px"
                         format="avif"
