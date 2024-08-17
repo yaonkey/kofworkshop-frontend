@@ -17,7 +17,7 @@ const menuitems = [
         path: "/contacts",
     },
     {
-        title: "О нас",
+        title: "Команда",
         path: "/about",
     },
 ];

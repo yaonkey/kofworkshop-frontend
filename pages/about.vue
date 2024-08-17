@@ -17,18 +17,14 @@ const team = [
         link: "https://t.me/Kofonkina/",
         avatar: {
             src: TeamImg1,
-            width: 480,
-            height: 560,
         },
     },
     {
         name: "София Чернова",
         title: "Курьер/продавец",
-        link: "ss",
+        link: "https://t.me/Sofafrisk",
         avatar: {
             src: TeamImg2,
-            width: 580,
-            height: 580,
         },
     },
     {
@@ -37,8 +33,6 @@ const team = [
         link: "https://t.me/ya0nkey/",
         avatar: {
             src: TeamImg3,
-            width: 580,
-            height: 580,
         },
     },
 ];
@@ -53,10 +47,6 @@ const team = [
             >
         </LandingSectionhead>
 
-        <LandingSectionhead>
-            <template v-slot:desc>Хуй</template>
-        </LandingSectionhead>
-
         <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
             <h2 class="font-bold text-3xl text-gray-800">
                 Работа превыше всего.
@@ -66,19 +56,21 @@ const team = [
                 работой. Каждый из нас любит свое дело.
             </p>
         </div>
-        <div class="md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12 flex">
-            <div v-for="item of team" class="group">
+        <div
+            class="flex-wrap items-center justify-center gap-10 mx-auto max-w-4xl mt-12 flex"
+        >
+            <div v-for="item of team" class="group border-b-black border-b-2">
                 <div class="w-full aspect-square">
-                    <img
+                    <NuxtImg
                         :src="item.avatar.src"
-                        :width="item.avatar.width"
-                        :height="item.avatar.height"
+                        placeholder="Загрузка"
+                        width="256px"
+                        height="256px"
                         format="avif"
-                        alt="Team"
-                        class="w-full h-full object-cover rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
+                        class="w-full h-full rounded-full border-black border-2 object-cover transition"
                     />
                 </div>
-                <div class="mt-4 text-center">
+                <div class="mt-4 text-center font-semibold">
                     <h2 class="text-lg text-gray-800">{{ item.name }}</h2>
                     <h3 class="text-sm text-slate-500">{{ item.title }}</h3>
                 </div>
@@ -87,9 +79,7 @@ const team = [
                         size="lg"
                         styleName="outline"
                         rel="noopener"
-                        href="{{"
-                        item.link
-                        }}
+                        :href="item.link"
                         target="_blank"
                         external
                         >Связаться</LandingLink
