@@ -1,5 +1,10 @@
 <template>
     <LandingContainer>
+        <LandingSectionhead>
+            <template v-slot:title>Блог</template>
+            <template v-slot:desc>Хотите узнать, чем мы занимаемся?</template>
+        </LandingSectionhead>
+
         <div
             class="w-full flex sm:flex-row md:grid-cols-3 mx-auto max-w-screen-lg mt-12"
         >
