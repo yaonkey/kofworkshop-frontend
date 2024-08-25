@@ -4,25 +4,13 @@
             Новинки
         </h2>
         <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
-            <div
-                v-for="item of news"
-                :key="item.id"
-                class="cursor-pointer flex gap-4 items-start"
-                @click="goToProduct(item.id)"
-            >
+            <div v-for="item of news" :key="item.id" class="cursor-pointer flex gap-4 items-start"
+                @click="goToProduct(item.id)">
                 <div
-                    class="flex flex-col w-full order-first lg:order-none border-2 border-[#D8DEE9] border-opacity-50 py-5 px-6 rounded-md"
-                >
-                    <NuxtImg
-                        class="rounded-full transition-transform transform hover:scale-125"
-                        src="/img/hero.png"
-                        alt="Kofworkshop icon"
-                        :placeholder="img(`/loading.svg`, { q: 10, h: 10 })"
-                        loading="eager"
-                        format="avif"
-                        width="512"
-                        height="512"
-                    />
+                    class="flex flex-col w-full order-first lg:order-none border-2 border-[#D8DEE9] border-opacity-50 py-5 px-6 rounded-md">
+                    <NuxtImg class="rounded-full transition-transform transform hover:scale-125" src="/img/hero.png"
+                        alt="Kofworkshop icon" :placeholder="img(`/loading.svg`, { q: 10, h: 10 })" loading="eager"
+                        format="avif" width="512" height="512" />
                     <div class="text-center">
                         <h3 class="font-semibold text-lg hover:underline">
                             {{ item.title }}
@@ -34,15 +22,8 @@
                         </h4>
                     </div>
                     <div class="text-center gap-4 mt-8">
-                        <LandingLink
-                            size="lg"
-                            styleName="outline"
-                            rel="noopener"
-                            to="{{"
-                            item.url
-                            }}
-                            >Перейти</LandingLink
-                        >
+                        <LandingLink size="lg" styleName="outline" rel="noopener" to="{{ item.url }}">Перейти
+                        </LandingLink>
                     </div>
                 </div>
             </div>
@@ -82,7 +63,7 @@ const news = [
 const router = useRouter();
 
 const goToProduct = (productNumber: number) => {
-    router.push(`/product/${productNumber}`);
+    router.push(`/catalog/${productNumber}`);
 };
 </script>
 

@@ -10,7 +10,7 @@ const products = [
         old_price: 2000,
         price: 1750,
         description: ["Высота: 25 см", "Ширина: 18 см"],
-        link: "/",
+        link: "1",
         type: "schema",
     },
     {
@@ -19,7 +19,7 @@ const products = [
         old_price: 700,
         price: 550,
         description: ["Высота: 25 см", "Ширина: 18 см"],
-        link: "/",
+        link: "2",
         type: "toy",
     },
     {
@@ -27,7 +27,7 @@ const products = [
         image: "/img/hero.png",
         price: 1200,
         description: ["Высота: 25 см", "Ширина: 18 см", "Глубина: 19 см"],
-        link: "/",
+        link: "3",
         type: "toy",
     },
     {
@@ -36,7 +36,7 @@ const products = [
         old_price: 700,
         price: 550,
         description: ["Высота: 25 см", "Ширина: 18 см"],
-        link: "/",
+        link: "4",
         type: "toy",
     },
     {
@@ -44,7 +44,7 @@ const products = [
         image: "/img/hero.png",
         price: 1200,
         description: "Высота: 25 см",
-        link: "/",
+        link: "5",
         type: "toy",
     },
     {
@@ -58,7 +58,7 @@ const products = [
             "Ширина: 18 см",
             "Ширина: 18 см",
         ],
-        link: "/",
+        link: "6",
         type: "toy",
     },
     {
@@ -66,7 +66,7 @@ const products = [
         image: "/img/hero.png",
         price: 1200,
         description: ["Высота: 25 см", "Ширина: 18 см", "Глубина: 19 см"],
-        link: "/",
+        link: "7",
         type: "toy",
     },
 ];
@@ -76,9 +76,7 @@ const products = [
     <LandingContainer>
         <LandingSectionhead>
             <template v-slot:title>Игрушки</template>
-            <template v-slot:desc
-                >Здесь можно заказать любую игрушку Вам по душе.</template
-            >
+            <template v-slot:desc>Здесь можно заказать любую игрушку Вам по душе.</template>
         </LandingSectionhead>
 
         <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
