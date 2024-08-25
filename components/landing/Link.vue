@@ -4,7 +4,7 @@ interface Props {
     to?: string;
     size?: "md" | "lg";
     block?: boolean;
-    styleName?: "outline" | "primary" | "inverted" | "muted";
+    styleName?: "outline" | "primary" | "inverted" | "muted" | "default";
     className?: string;
     [x: string]: any;
 }
@@ -25,19 +25,17 @@ const styles = {
         "bg-black text-white hover:bg-gray-800  border-2 border-transparent",
     inverted: "bg-white text-black border-2 border-transparent",
     muted: "bg-gray-100 hover:bg-gray-200 border-2 border-transparent",
+    default: "",
 };
 </script>
 
 <template>
-    <NuxtLink
-        :to="to"
-        :href="href"
-        :class="[
-            'rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200',
-            block && 'w-full',
-            sizes[size],
-            styles[styleName],
-        ]"
-        ><slot />
+    <NuxtLink :to="to" :href="href" :class="[
+        'rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200',
+        block && 'w-full',
+        sizes[size],
+        styles[styleName],
+    ]">
+        <slot />
     </NuxtLink>
 </template>
