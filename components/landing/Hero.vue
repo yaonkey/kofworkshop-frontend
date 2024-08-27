@@ -29,7 +29,7 @@
             <div
                 class="mt-6 flex flex-col md:flex-row gap-5 text-center font-semibold"
             >
-                <div class="flex flex-col gap-2 items-center justify-center">
+                <div class="flex flex-col lg:flex-row gap-2 items-center justify-center">
                     <div class="flex flex-row gap-2 items-center justify-center">
                         <LandingLink
                             size="lg"
