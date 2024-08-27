@@ -6,7 +6,7 @@ let img = useImage();
 <template>
     <div>
         <div
-            class="h-full flex flex-col w-full order-first lg:order-none border-2 border-[#D8DEE9] border-opacity-50 py-6 px-7 rounded-md gap-4">
+            class="h-full flex flex-col w-full order-first lg:order-none border-2 border-[#D8DEE9] border-opacity-50 py-6 px-7 rounded-2xl gap-4">
             <div class="text-center">
                 <h4 class="text-xl text-black">
                     <span class="font-bold">{{

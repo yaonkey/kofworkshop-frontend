@@ -2,8 +2,16 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
-
-  css: ["~/assets/css/main.css"],
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "~/assets/scss/_colors.scss" as *;'
+        }
+      }
+    }
+  },
+  css: ["~/assets/scss/main.scss"],
   postcss: {
     plugins: {
       tailwindcss: {},
