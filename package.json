@@ -20,9 +20,12 @@
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/tailwindcss": "^6.12.0",
     "@tailwindcss/typography": "^0.5.13",
+    "@vercel/kv": "^2.0.0",
+    "@vercel/postgres": "^0.9.0",
     "nuxt": "^3.12.3",
     "nuxt-icons": "^3.2.1",
-    "vue": "^3.4.34"
+    "vue": "^3.4.34",
+    "yarn": "^1.22.22"
   },
   "devDependencies": {
     "sass": "^1.77.8"
