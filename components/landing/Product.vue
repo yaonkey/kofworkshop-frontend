@@ -74,7 +74,7 @@ let img = useImage();
                 </span>
             </div>
             <div class="flex gap-4">
-                <div class="flex mt-2 w-max md:w-full">
+                <div class="flex mt-2 w-full">
                     <LandingLink
                         :to="product.id ? '/catalog/' + product.id : '#'"
                         block
@@ -83,7 +83,7 @@ let img = useImage();
                 </div>
                 <div
                     v-if="product.file || typeof product.file == 'null'"
-                    class="flex mt-2 w-max md:w-full"
+                    class="flex mt-2 w-full"
                 >
                     <LandingLink block styleName="outline"> Схема </LandingLink>
                 </div>
