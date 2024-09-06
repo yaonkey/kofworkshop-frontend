@@ -14,7 +14,7 @@
                     class="rounded-2xl flex flex-col w-full order-first lg:order-none border-2 border-[#D8DEE9] border-opacity-50 py-5 px-6"
                 >
                     <NuxtImg
-                        class="rounded-full transition-transform transform hover:scale-125"
+                        class="rounded-full duration-700 ease-in-out transition-transform transform hover:scale-125"
                         src="/img/hero.png"
                         alt="Kofworkshop icon"
                         :placeholder="img(`/loading.svg`, { q: 10, h: 10 })"

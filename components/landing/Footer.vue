@@ -1,6 +1,6 @@
 <template>
     <footer
-        class="flex flex-col overflow-hidden mt-8 items-center bg-black w-full bottom-0 left-0 relative"
+        class="flex flex-col overflow-hidden mt-8 items-center bg-black w-full bottom-0 left-0"
     >
         <div class="w-auto mx-auto max-w-screen-xl p-4">
             <span class="text-sm text-gray-400"

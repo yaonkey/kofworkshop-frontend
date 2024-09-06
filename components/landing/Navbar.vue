@@ -23,7 +23,7 @@ const open = ref(false);
 
 <template>
     <LandingContainer>
-        <header class="flex flex-col lg:flex-row justify-between items-center my-5">
+        <header class="static top-0 flex flex-col lg:flex-row justify-between items-center my-5">
             <div class="flex w-full lg:w-auto items-center justify-between font-semibold">
                 <a href="/" class="text-3xl lg:text-2xl logo-text">
                     <span class="font-medium text-[#ff5712] m-px">Kof</span>
