@@ -6,7 +6,7 @@ let img = useImage();
 <template>
     <div>
         <div v-if="product.is_available"
-            class="p-2 justify-between relative max-w-full sm:max-w-sm h-full flex flex-col w-full shadow border border-[#D8DEE9] border-opacity-50 rounded-2xl mb-2">
+            class="p-2 justify-between max-w-full sm:max-w-sm h-full flex flex-col w-full shadow border border-[#D8DEE9] border-opacity-50 rounded-2xl mb-2">
             <div class="flex items-center justify-center">
                 <img class="rounded-t-2xl" :src="img(
                     `${product.image ? '/img/' + product.image : '/loading.svg'}`,
@@ -45,7 +45,7 @@ let img = useImage();
                         }}
                     </span>
                 </p>
-                <div class="truncate h-full w-full mb-6 font-normal text-gray-400">
+                <div class="truncate mb-4 w-full font-normal text-gray-400">
                     <span v-if="typeof product.description == 'string'">{{
                         product.description
                         }}</span>
@@ -53,12 +53,12 @@ let img = useImage();
                         }}<br />
                     </span>
                 </div>
-                <div class="w-full gap-4 mb-2 pt-4">
-                    <div class="absolute bottom-6 left-4">
+                <div class="w-full flex gap-2">
+                    <div class="flex w-full">
                         <LandingLink :to="product.id ? '/catalog/' + product.id : '#'" block>Заказать
                         </LandingLink>
                     </div>
-                    <div class="bottom-6 absolute right-4" v-if="product.file || typeof product.file == 'null'">
+                    <div class="flex w-full" v-if="product.file || typeof product.file == 'null'">
                         <LandingLink block styleName="outline"> Схема </LandingLink>
                     </div>
                 </div>
