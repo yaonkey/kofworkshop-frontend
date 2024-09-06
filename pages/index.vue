@@ -2,6 +2,9 @@
 definePageMeta({
     layout: "landing",
 });
+useHead({
+    title: "Kofworkshop",
+});
 </script>
 
 <template>

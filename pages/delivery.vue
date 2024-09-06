@@ -2,6 +2,9 @@
 definePageMeta({
     layout: "landing",
 });
+useHead({
+    title: "Доставка",
+});
 </script>
 
 <template>
@@ -40,7 +43,7 @@ definePageMeta({
             </ol>
             <p class="text-lg leading-relaxed font-bold text-slate-700">
                 Отправка Почтой России и Яндекс Доставкой по России при заказе
-                от 900 руб. ✨стоит 100 руб✨
+                от 900 руб ✨стоит 100 руб✨
             </p>
         </div>
     </LandingContainer>

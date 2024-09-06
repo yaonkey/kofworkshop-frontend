@@ -2,8 +2,7 @@
 definePageMeta({
     layout: "landing",
 });
-const route = useRoute();
-console.log(route.params.id);
+
 </script>
 
 <template>

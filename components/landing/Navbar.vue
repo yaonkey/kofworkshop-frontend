@@ -13,10 +13,6 @@ const menuitems = [
         path: "/delivery/",
     },
     {
-        title: "Контакты",
-        path: "/contacts/",
-    },
-    {
         title: "Команда",
         path: "/about/",
     },
@@ -30,8 +26,8 @@ const open = ref(false);
         <header class="flex flex-col lg:flex-row justify-between items-center my-5">
             <div class="flex w-full lg:w-auto items-center justify-between font-semibold">
                 <a href="/" class="text-3xl lg:text-2xl logo-text">
-                    <span class="font-bold text-purple-800">Kof</span>
-                    <span class="text-slate-500">workshop</span>
+                    <span class="font-medium text-[#ff5712] m-px">Kof</span>
+                    <span class="text-black">workshop</span>
                 </a>
                 <div class="block lg:hidden">
                     <button @click="open = !open" class="text-gray-800">
@@ -55,16 +51,23 @@ const open = ref(false);
                             {{ item.title }}
                         </LandingLink>
                     </li>
+                    <li>
+                        <div class="lg:hidden flex items-center mt-3 gap-4">
+                            <LandingLink href="#" size="md" styleName="outline" class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900 flex-row gap-2">
+                                <NuxtImg src="/icons/cart.svg" alt="Cart icon" loading="eager" format="avif" width="30"
+                                    height="30" />Корзина
+                            </LandingLink>
+                        </div>
+                    </li>
                 </ul>
-                <div class="lg:hidden flex items-center mt-3 gap-4">
-                    <LandingLink href="#" styleName="default" block size="md">Вход</LandingLink>
-                    <LandingLink href="#" size="md" block>Регистрация</LandingLink>
-                </div>
+
             </nav>
             <div>
                 <div class="hidden lg:flex items-center gap-4">
-                    <LandingLink href="#" size="md" styleName="default">Вход</LandingLink>
-                    <LandingLink href="#" size="md">Регистрация</LandingLink>
+                    <LandingLink href="#" size="md" styleName="outline">
+                        <NuxtImg src="/icons/cart.svg" alt="cart icon" loading="eager" format="avif" width="25"
+                            height="25" />
+                    </LandingLink>
                 </div>
             </div>
         </header>

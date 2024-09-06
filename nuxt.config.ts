@@ -3,13 +3,21 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
   vite: {
+    build: {
+      target: "esnext",
+    },
+    esbuild: {
+      supported: {
+        "top-level-await": true, //browsers can handle top-level-await features
+      },
+    },
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@use "~/assets/scss/_colors.scss" as *;'
-        }
-      }
-    }
+          additionalData: '@use "~/assets/scss/_colors.scss" as *;',
+        },
+      },
+    },
   },
   css: ["~/assets/scss/main.scss"],
   postcss: {
@@ -28,23 +36,29 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/icon", [
-    "@nuxtjs/google-fonts",
-    {
-      families: {
-        Roboto: true,
-        "Josefin+Sans": true,
-        Lato: [100, 300],
-        Raleway: {
-          wght: [100, 400],
-          ital: [100],
-        },
-        Inter: "200..700",
-        "Crimson Pro": {
-          wght: "200..900",
-          ital: "200..700",
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@nuxt/icon",
+    [
+      "@nuxtjs/google-fonts",
+      {
+        families: {
+          Roboto: true,
+          "Josefin+Sans": true,
+          Lato: [100, 300],
+          Raleway: {
+            wght: [100, 400],
+            ital: [100],
+          },
+          Inter: "200..700",
+          "Crimson Pro": {
+            wght: "200..900",
+            ital: "200..700",
+          },
         },
       },
-    },
-  ], "@nuxt/fonts", "@nuxt/image"],
+    ],
+    "@nuxt/fonts",
+    "@nuxt/image",
+  ],
 });

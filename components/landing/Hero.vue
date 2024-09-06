@@ -1,3 +1,7 @@
+<script setup lang="ts">
+
+</script>
+
 <template>
     <main
         class="flex px-2 lg:flex-cols-2 place-items-center pt-16 pb-8 md:pt-8"
@@ -19,11 +23,11 @@
             <h1
                 class="text-2xl sm:text-wrap md:text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight"
             >
-                Творческая <span class="underline">мастерская</span> вязаных
+                Творческая <span class="underline decoration-black text-[#ff5712]">мастерская</span> вязаных
                 игрушек
             </h1>
             <p class="text-lg mt-4 text-slate-600 max-w-xl">
-                Творческая мастерская, которой заведует одна девушка.<wbr />
+                Творческая мастерская, которой заведует одна девушка.<br />
                 Игрушки различной сложности и совершенно разных расцветок
             </p>
             <div

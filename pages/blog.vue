@@ -14,6 +14,9 @@
 </template>
 
 <script lang="ts" setup>
+useHead({
+    title: "Блог",
+});
 definePageMeta({
     layout: "landing",
 });
@@ -21,10 +24,10 @@ definePageMeta({
 const news = [
     {
         title: "title",
-        image: "image",
+        image: "/loading.svg",
         date: "19.02.2024",
         text: "some text some textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome textsome text",
-        link: "ss",
+        link: "/",
     },
 ];
 </script>

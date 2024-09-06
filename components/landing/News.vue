@@ -38,7 +38,7 @@
                             size="lg"
                             styleName="outline"
                             rel="noopener"
-                            to="{{ item.url }}"
+                            :to="item.url"
                             >Перейти
                         </LandingLink>
                     </div>

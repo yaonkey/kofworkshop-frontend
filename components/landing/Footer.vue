@@ -14,7 +14,7 @@
                     rel="noopener"
                     class="hover:underline"
                 >
-                    <span class="text-teal-600"> Yaonkey</span>
+                    <span class="text-[#ff5712]"> Yaonkey</span>
                 </a>
             </span>
         </div>
