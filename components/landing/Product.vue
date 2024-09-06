@@ -6,7 +6,7 @@ let img = useImage();
 <template>
     <div>
         <div v-if="product.is_available"
-            class="p-2 justify-between max-w-full sm:max-w-sm h-full flex flex-col w-full shadow border border-[#D8DEE9] border-opacity-50 rounded-2xl mb-2">
+            class="p-2 order-first lg:order-none justify-between h-full flex flex-col w-full shadow border border-[#D8DEE9] border-opacity-50 rounded-2xl mb-2">
             <div class="flex items-center justify-center">
                 <img class="rounded-t-2xl" :src="img(
                     `${product.image ? '/img/' + product.image : '/loading.svg'}`,
@@ -17,7 +17,7 @@ let img = useImage();
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-black">
                     <span>{{
                         product.title ?? "Без названия"
-                        }}</span>
+                    }}</span>
                     <span class="text-[#ff5712] font-semibold text-xl" v-if="
                         product.old_price &&
                         typeof product.old_price != 'undefined' &&
@@ -48,7 +48,7 @@ let img = useImage();
                 <div class="truncate mb-4 w-full font-normal text-gray-400">
                     <span v-if="typeof product.description == 'string'">{{
                         product.description
-                        }}</span>
+                    }}</span>
                     <span v-if="typeof product.description == 'object'" v-for="idx in 2">{{ product.description[idx]
                         }}<br />
                     </span>
