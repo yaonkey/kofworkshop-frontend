@@ -47,7 +47,7 @@ const open = ref(false);
                 <ul class="flex flex-col lg:flex-row lg:gap-3">
                     <li v-for="item of menuitems">
                         <LandingLink styleName="default" :to="item.path"
-                            class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900">
+                            class="transition duration-500 ease-in-out flex lg:px-3 py-2 text-gray-600 hover:text-gray-900">
                             {{ item.title }}
                         </LandingLink>
                     </li>

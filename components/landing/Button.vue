@@ -18,11 +18,11 @@ const sizes = {
 };
 
 const styles = {
-    outline: "border-2 border-black hover:bg-black text-black hover:text-white",
+    outline: "transition duration-700 ease-in-out border-2 border-black hover:bg-black text-black hover:text-white",
     primary:
-        "bg-black text-white hover:bg-slate-900 border-2 border-transparent",
+        "transition duration-700 ease-in-out bg-black text-white hover:bg-slate-900 border-2 border-transparent",
     inverted:
-        "bg-white text-black hover:bg-slate-900 border-2 border-transparent",
+        "transition duration-700 ease-in-out bg-white text-black hover:bg-slate-900 border-2 border-transparent",
 };
 </script>
 
