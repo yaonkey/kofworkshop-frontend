@@ -35,7 +35,19 @@ const team = [
 
         <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
             <h2 class="font-bold text-3xl text-gray-800">
-                Работа превыше всего.
+                Мы в соцсетях
+            </h2>
+            <p class="text-lg leading-relaxed text-slate-500">
+                Чтобы всем было проще нас было найти в любимых социальных сетях.
+            </p>
+        </div>
+        <div class="flex-wrap items-center justify-center gap-10 mx-auto max-w-4xl mt-12 flex">
+            <LandingSocial />
+        </div>
+
+        <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+            <h2 class="font-bold text-3xl text-gray-800">
+                Работа превыше всего
             </h2>
             <p class="text-lg leading-relaxed text-slate-500">
                 Хоть мы все и разные, но все одинакого любим засиживаться за
