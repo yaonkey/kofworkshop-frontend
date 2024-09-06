@@ -6,7 +6,7 @@
         </LandingSectionhead>
 
         <div
-            class="w-full flex sm:flex-row md:grid-cols-3 mx-auto max-w-screen-lg mt-12"
+            class="flex flex-col gap-3 mx-auto max-w-4xl mt-16"
         >
             <LandingBlogNews v-for="one_news of news" :news="one_news" />
         </div>
