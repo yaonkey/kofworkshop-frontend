@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-16 md:mt-0 text-center pb-3">
+    <div class="mt-10 md:mt-0 text-center pb-3">
         <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
             Новинки
         </h2>
