@@ -5,7 +5,7 @@ let img = useImage();
 
 <template>
     <div v-if="product.is_available"
-        class="p-2 justify-between relative sm:max-w-sm h-full flex flex-col w-full shadow border border-[#D8DEE9] border-opacity-50 rounded-2xl mb-2">
+        class="p-2 justify-between relative max-w-full sm:max-w-sm h-full flex flex-col w-full shadow border border-[#D8DEE9] border-opacity-50 rounded-2xl mb-2">
         <div class="flex items-center justify-center">
             <img class="rounded-t-2xl" :src="img(
                 `${product.image ? '/img/' + product.image : '/loading.svg'}`,
