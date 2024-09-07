@@ -29,7 +29,7 @@ const open = ref(false);
                     <span class="font-medium text-[#ff5712] m-px">Kof</span>
                     <span class="text-black">workshop</span>
                 </a>
-                <div class="block lg:hidden">
+                <div class="duration-700 ease-in-out transition-transform transform block lg:hidden">
                     <button @click="open = !open" class="text-gray-800">
                         <svg fill="currentColor" class="w-6 h-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <title>Меню</title>
@@ -46,14 +46,15 @@ const open = ref(false);
             <nav class="w-full lg:w-auto mt-2 lg:flex lg:mt-0" :class="{ block: open, hidden: !open }">
                 <ul class="flex flex-col lg:flex-row lg:gap-3">
                     <li v-for="item of menuitems">
-                        <LandingLink styleName="default" :to="item.path" @click="open=false"
+                        <LandingLink styleName="default" :to="item.path" @click="open = false"
                             class="transition duration-500 ease-in-out flex lg:px-3 py-2 text-gray-600 hover:text-gray-900">
                             {{ item.title }}
                         </LandingLink>
                     </li>
                     <li>
                         <div class="lg:hidden flex items-center mt-3 gap-4">
-                            <LandingLink href="#" size="md" styleName="outline" class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900 flex-row gap-2">
+                            <LandingLink href="#" size="md" styleName="outline"
+                                class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900 flex-row gap-2">
                                 <NuxtImg src="/icons/cart.svg" alt="Cart icon" loading="eager" format="avif" width="30"
                                     height="30" />Корзина
                             </LandingLink>
