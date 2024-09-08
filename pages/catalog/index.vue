@@ -2,7 +2,10 @@
 definePageMeta({
     layout: "landing",
 });
-const { data } = useFetch("/api/products");
+const { data, status } = useAsyncData(
+    'products',
+    () => $fetch('/api/products')
+);
 </script>
 
 <template>
@@ -12,7 +15,7 @@ const { data } = useFetch("/api/products");
             <template v-slot:desc>Здесь можно заказать любую игрушку Вам по душе.</template>
         </LandingSectionhead>
         <div class="grid md:grid-cols-3 gap-10 mx-auto mt-12">
-            <LandingProduct v-for="product of data.rows" :product="product" />
+            <LandingProduct v-if="status == 'success'" v-for="product of data.rows" :product="product" />
         </div>
     </LandingContainer>
 </template>

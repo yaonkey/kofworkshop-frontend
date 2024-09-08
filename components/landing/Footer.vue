@@ -1,5 +1,5 @@
 <template>
-    <footer class="flex flex-col overflow-hidden mt-8 items-center bg-black w-full left-0">
+    <footer class="footer flex flex-col overflow-hidden mt-8 items-center bg-black w-full left-0">
         <div class="w-auto mx-auto max-w-screen-xl p-4">
             <span class="text-sm text-gray-400">© {{ new Date().getFullYear() }}
                 <a href="/" class="hover:underline">Kofworkshop</a>. Все права
