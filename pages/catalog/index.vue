@@ -14,7 +14,7 @@ const { data, status } = useAsyncData(
             <template v-slot:title>Игрушки</template>
             <template v-slot:desc>Здесь можно заказать любую игрушку Вам по душе.</template>
         </LandingSectionhead>
-        <div class="grid md:grid-cols-3 gap-10 mx-auto mt-12">
+        <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12 justify-center">
             <LandingProduct v-if="status == 'success'" v-for="product of data.rows" :product="product" />
         </div>
     </LandingContainer>
