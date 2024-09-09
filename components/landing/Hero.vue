@@ -13,8 +13,8 @@ import type { LandingSocial } from '#build/components';
         </div>
 
         <div>
-            <h1 class="text-2xl sm:text-wrap md:text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight">
-                Творческая <span class="underline decoration-black text-[#ff5712]">мастерская</span> вязаных
+            <h1 class="text-2xl text-neutral-800 sm:text-wrap md:text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight">
+               Творческая <span class="underline decoration-neutral-800 text-lime-800">мастерская</span> вязаных
                 игрушек
             </h1>
             <p class="text-lg mt-4 text-slate-600 max-w-xl">

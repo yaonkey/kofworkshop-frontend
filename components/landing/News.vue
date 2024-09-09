@@ -1,6 +1,6 @@
 <template>
     <div class="mt-10 md:mt-0 text-center pb-3">
-        <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+        <h2 class="text-4xl lg:text-5xl text-neutral-800 font-bold lg:tracking-tight">
             Новинки
         </h2>
         <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
@@ -24,12 +24,12 @@
                         height="512"
                     />
                     <div class="text-center">
-                        <h3 class="font-semibold text-lg hover:underline">
+                        <h3 class="text-neutral-800 font-semibold text-lg hover:underline">
                             {{ item.title }}
                         </h3>
                     </div>
                     <div class="text-center">
-                        <h4 class="text-lg font-medium text-gray-400">
+                        <h4 class="text-lg font-medium text-neutral-600">
                             {{ item.price }} руб.
                         </h4>
                     </div>

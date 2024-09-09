@@ -8,10 +8,10 @@ defineProps({
 
 <template>
   <div :class="['mt-16', align === 'center' && 'text-center']">
-    <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    <h1 class="text-4xl lg:text-5xl text-neutral-800 font-bold lg:tracking-tight">
       <slot name="title">Название</slot>
     </h1>
-    <p class="text-lg mt-4 text-slate-600">
+    <p class="text-lg mt-4 text-neutral-700">
       <slot name="desc">Какое-то описание</slot>
     </p>
   </div>

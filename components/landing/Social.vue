@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col lg:flex-row gap-2 items-center justify-center">
-    <div class="flex flex-row gap-2 items-center justify-center">
+  <div class="flex flex-col lg:flex-row gap-3 items-center justify-center">
+    <div class="flex flex-row gap-3 items-center justify-center">
       <LandingLink size="lg" styleName="outline" rel="noopener" href="https://vk.com/kofworkshop" target="_blank"
         class="rounded-xl animate-[bounce_2s_ease-in-out_infinite]">
         <NuxtImg src="/icons/vk.svg" alt="VK icon" loading="eager" format="avif" width="50" height="50" />
@@ -13,8 +13,6 @@
         class="rounded-xl animate-[bounce_2s_ease-in-out_infinite]">
         <NuxtImg src="/icons/reddit.svg" alt="Reddit icon" loading="eager" format="avif" width="50" height="50" />
       </LandingLink>
-    </div>
-    <div class="flex flex-row gap-2 items-center justify-center">
       <LandingLink size="lg" styleName="outline" rel="noopener" href="https://pikabu.ru/@megawhat" target="_blank"
         class="rounded-xl animate-[bounce_1.5s_ease-in-out_infinite]">
         <NuxtImg src="/icons/pikabu.svg" alt="Pikabu icon" loading="eager" format="avif" width="50" height="50" />

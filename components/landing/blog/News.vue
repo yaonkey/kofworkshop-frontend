@@ -8,7 +8,7 @@ defineProps(["news"]);
             class="flex flex-col w-full order-first lg:order-none border-2 border-[#D8DEE9] border-opacity-50 py-5 px-6 rounded-md"
         >
             <div class="text-center items-center">
-                <h5 class="text-lg font-medium text-black text-bold mb-2">
+                <h5 class="text-lg font-medium text-neutral-800 text-bold mb-2">
                     {{ news.title ?? "Без названия" }}
                 </h5>
                 <div class="flex sm:w-40 items-center">

@@ -20,12 +20,12 @@ const sizes = {
 };
 
 const styles = {
-    outline: "transition duration-700 ease-in-out bg-white border-2 border-black hover:border-[#ff5712] text-blacks",
+    outline: "transition duration-700 ease-in-out bg-neutral-100 hover:bg-neutral-100 border-2 border-neutral-800 hover:border-lime-800 text-neutral-800",
     primary:
-        "transition duration-700 ease-in-out bg-black text-white hover:text-[#ff5712] border-2 border-transparent rounded-md",
-    inverted: "transition duration-700 ease-in-out bg-white text-[#ff5712] border-2 border-transparent",
-    text: "transition duration-700 ease-in-out bg-transparent text-black border-2 border-transparent",
-    muted: "transition duration-700 ease-in-out bg-gray-100 hover:bg-gray-200 border-2 border-transparent",
+        "transition duration-700 ease-in-out bg-neutral-800 hover:bg-neutral-900 text-neutral-100 hover:text-lime-600 border-2 border-transparent rounded-md",
+    inverted: "transition duration-700 ease-in-out bg-neutral-100 text-lime-800 border-2 border-transparent",
+    text: "transition duration-700 ease-in-out bg-transparent text-neutral-800 border-2 border-transparent",
+    muted: "transition duration-700 ease-in-out bg-neutral-800 hover:bg-neutral-900 border-2 border-transparent",
     default: "",
 };
 </script>

@@ -2,15 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+:root, html {
     font-family: "Exo 2", regular;
     font-weight: 400;
+    background-color: #f3f4f6;
     font-style: normal;
     /* background-image: url("../../public/bg.svg"); */
 }
 
-.logo-text {
-    font-family: "New Amsterdam", sans-serif;
-    font-weight: 400;
+svg {
+    fill: #059669;
+}
+
+.logo-text, p, h1, h2, h3, h4, h5, h6 {
+    font-family: "Exo 2", regular;
+    font-weight: 500;
     font-style: normal;
 }

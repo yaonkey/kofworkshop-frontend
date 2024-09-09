@@ -24,10 +24,10 @@ const open = ref(false);
 <template>
     <LandingContainer>
         <header class="static top-0 flex flex-col lg:flex-row justify-between items-center my-5">
-            <div class="flex w-full lg:w-auto items-center justify-between font-semibold">
+            <div class="flex w-full lg:w-auto items-center justify-between font-light">
                 <a href="/" class="text-3xl lg:text-2xl logo-text">
-                    <span class="font-medium text-[#ff5712] m-px">Kof</span>
-                    <span class="text-black">workshop</span>
+                    <span class="text-lime-800 m-px">Kof</span>
+                    <span class="text-neutral-800">workshop</span>
                 </a>
                 <Transition name="slide-fade">
                     <div class="block lg:hidden">
