@@ -62,4 +62,13 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
     "@nuxt/image",
   ],
+  icon: {
+    size: "32px",
+    customCollections: [
+      {
+        prefix: 'social',
+        dir: './assets/icons/'
+      }
+    ]
+  }
 });

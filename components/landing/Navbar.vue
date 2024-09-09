@@ -1,7 +1,8 @@
 <script setup>
+
 const menuitems = [
     {
-        title: "Каталог",
+        title: "Игрушки",
         path: "/catalog/",
     },
     {
@@ -13,7 +14,7 @@ const menuitems = [
         path: "/delivery/",
     },
     {
-        title: "Команда",
+        title: "О нас",
         path: "/about/",
     },
 ];
@@ -50,27 +51,24 @@ const open = ref(false);
                 <ul class="flex flex-col lg:flex-row lg:gap-3">
                     <li v-for="item of menuitems">
                         <LandingLink styleName="default" :to="item.path" @click="open = false"
-                            class="transition duration-500 ease-in-out flex lg:px-3 py-2 text-gray-600 hover:text-gray-900">
+                            class="transition duration-500 ease-in-out flex lg:px-3 py-2 text-neutral-800 hover:text-lime-800">
                             {{ item.title }}
                         </LandingLink>
                     </li>
                     <li>
                         <div class="lg:hidden flex items-center mt-3 gap-4">
                             <LandingLink href="#" size="md" styleName="outline"
-                                class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900 flex-row gap-2">
-                                <NuxtImg src="/icons/cart.svg" alt="Cart icon" loading="eager" format="avif" width="30"
-                                    height="30" />Корзина
+                                class="flex lg:px-3 py-2 text-neutral-800 hover:text-lime-800 flex-row gap-2">
+                                <Icon name="social:cart" class="hover:fill-lime-800" /> Корзина
                             </LandingLink>
                         </div>
                     </li>
                 </ul>
-
             </nav>
             <div>
                 <div class="hidden lg:flex items-center gap-4">
                     <LandingLink href="#" size="md" styleName="outline" to="/cart">
-                        <NuxtImg src="/icons/cart.svg" alt="cart icon" loading="eager" format="avif" width="25"
-                            height="25" />
+                        <Icon name="social:cart" width="25" height="25" />
                     </LandingLink>
                 </div>
             </div>

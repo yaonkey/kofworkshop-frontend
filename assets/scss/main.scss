@@ -2,20 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-:root, html {
-    font-family: "Exo 2", regular;
-    font-weight: 400;
-    background-color: #f3f4f6;
-    font-style: normal;
-    /* background-image: url("../../public/bg.svg"); */
+:root,
+html {
+  font-family: "Exo 2", regular;
+  font-weight: 400;
+  background-color: #f3f4f6;
+  font-style: normal;
+  /* background-image: url("../../public/bg.svg"); */
 }
 
 svg {
-    fill: #262626;
+  &:hover {
+    fill: #3f6212;
+  }
 }
 
-.logo-text, p, h1, h2, h3, h4, h5, h6 {
-    font-family: "Exo 2", regular;
-    font-weight: 500;
-    font-style: normal;
+.logo-text,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Exo 2", regular;
+  font-weight: 500;
+  font-style: normal;
 }
