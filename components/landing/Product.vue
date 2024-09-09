@@ -6,9 +6,9 @@ let img = useImage();
 <template>
     <div>
         <div v-if="product.is_available"
-            class="h-full flex flex-col justify-between w-full order-first lg:order-none border border-neutral-300 border-opacity-50 rounded-2xl mb-2">
+            class="h-full flex flex-col justify-between w-full bg-neutral-50 order-first lg:order-none border border-neutral-300 border-opacity-50 rounded-2xl mb-2">
             <div class="flex items-center justify-center">
-                <img class="rounded-t-2xl" :src="img(
+                <img class="rounded-t-2xl max-h-52 max-w-80 object-cover" width="320px" height="200px" :src="img(
                     `${product.image ? '/img/' + product.image : '/loading.svg'}`,
                 )
                     " />
