@@ -20,7 +20,7 @@ const sizes = {
 };
 
 const styles = {
-    outline: "transition duration-700 ease-in-out bg-neutral-100 hover:bg-neutral-100 border-2 border-neutral-800 hover:border-lime-800 text-neutral-800",
+    outline: "transition duration-700 ease-in-out bg-transparent hover:bg-neutral-100 border-2 border-neutral-800 hover:border-lime-800 text-neutral-800",
     primary:
         "transition duration-700 ease-in-out bg-neutral-800 hover:bg-neutral-900 text-neutral-100 hover:text-lime-600 border-2 border-transparent rounded-md",
     inverted: "transition duration-700 ease-in-out bg-neutral-100 text-lime-800 border-2 border-transparent",

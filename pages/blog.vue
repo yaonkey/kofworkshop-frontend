@@ -1,16 +1,3 @@
-<template>
-    <LandingContainer>
-        <LandingSectionhead>
-            <template v-slot:title>Блог</template>
-            <template v-slot:desc>Хотите узнать, чем мы занимаемся?</template>
-        </LandingSectionhead>
-
-        <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-            <LandingBlogNews v-for="one_news of news" :news="one_news" />
-        </div>
-    </LandingContainer>
-</template>
-
 <script lang="ts" setup>
 useHead({
     title: "Блог",
@@ -33,5 +20,18 @@ const news = [
     },
 ];
 </script>
+
+<template>
+    <LandingContainer>
+        <LandingSectionhead>
+            <template v-slot:title>Блог</template>
+            <template v-slot:desc>Хотите узнать, чем мы занимаемся?</template>
+        </LandingSectionhead>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mx-auto max-w-4xl mt-16">
+            <LandingBlogNews v-for="one_news of news" :news="one_news" />
+        </div>
+    </LandingContainer>
+</template>
 
 <style></style>

@@ -59,7 +59,7 @@ let img = useImage();
                         </LandingLink>
                     </div>
                     <div class="flex w-full" v-if="product.file || typeof product.file == 'null'">
-                        <LandingLink block styleName="outline">  </LandingLink>
+                        <LandingLink block styleName="outline"> Описание </LandingLink>
                     </div>
                 </div>
             </div>
