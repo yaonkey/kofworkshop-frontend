@@ -15,4 +15,8 @@ export default class Product {
     this.price = price;
     this.old_price = old_price;
   }
+
+  addToCart() {
+    
+  }
 }
