@@ -34,10 +34,10 @@ const team = [
         </LandingSectionhead>
 
         <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-            <h2 class="font-bold text-3xl text-gray-800">
+            <h2 class="font-bold text-3xl text-neutral-800">
                 Мы в соцсетях
             </h2>
-            <p class="text-lg leading-relaxed text-slate-500">
+            <p class="text-lg leading-relaxed text-neutral-700">
                 Чтобы всем было проще нас было найти в любимых социальных сетях.
             </p>
         </div>
@@ -46,20 +46,20 @@ const team = [
         </div>
 
         <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-            <h2 class="font-bold text-3xl text-gray-800">
+            <h2 class="font-bold text-3xl text-neutral-800">
                 Работа превыше всего
             </h2>
-            <p class="text-lg leading-relaxed text-slate-500">
+            <p class="text-lg leading-relaxed text-neutral-700">
                 Хоть мы все и разные, но все одинакого любим засиживаться за
                 работой. Каждый из нас любит свое дело.
             </p>
         </div>
         <div class="flex-wrap items-center justify-center gap-10 mx-auto max-w-4xl mt-12 flex">
-            <div v-for="item of team" class="group border-b-black border-b-2">
+            <div v-for="item of team" class="group">
                 <div class="w-64 aspect-square h-64">
                     <NuxtImg :src="item.avatar.src" placeholder="/loading.svg" width="256px" height="256px"
                         format="avif"
-                        class="w-full h-full rounded-full border-black border-2 object-cover transition" />
+                        class="w-full h-full rounded-full border-neutral-800 border-2 object-cover transition" />
                 </div>
                 <div class="mt-4 text-center font-semibold">
                     <h2 class="text-lg text-gray-800">{{ item.name }}</h2>

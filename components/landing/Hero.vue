@@ -3,12 +3,11 @@
 </script>
 
 <template>
-    <main class="flex px-2 lg:flex-cols-2 place-items-center pt-16 pb-8 md:pt-8">
+    <main class="flex px-2 lg:flex-cols-2 place-items-center pt-16 pb-8 md:pt-8 lg:h-screen">
         <div class="p-24 md:order-1 hidden md:block">
             <NuxtImg
                 class="rounded-full duration-700 ease-in-out transition-transform transform hover:rotate-6 scale-125"
-                src="/img/hero.png" alt="Kofworkshop icon" loading="eager" format="avif" width="512" height="512"
-                placeholder="/loading.svg" />
+                src="/img/hero.png" alt="Kofworkshop icon" width="512" height="512" />
         </div>
 
         <div>

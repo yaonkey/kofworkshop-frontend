@@ -24,7 +24,7 @@ const open = ref(false);
 
 <template>
     <LandingContainer>
-        <header class="static top-0 flex flex-col lg:flex-row justify-between items-center my-5">
+        <header class="static top-0 flex flex-col lg:flex-row justify-between items-center mb-5 pt-5">
             <div class="flex w-full lg:w-auto items-center justify-between font-light">
                 <a href="/" class="text-3xl lg:text-2xl logo-text">
                     <span class="text-lime-800 m-px">Kof</span>
@@ -33,7 +33,7 @@ const open = ref(false);
                 <Transition name="slide-fade">
                     <div class="block lg:hidden">
                         <button @click="open = !open" class="text-gray-800">
-                            <svg fill="currentColor" class="w-6 h-6" viewBox="0 0 20 20"
+                            <svg fill="currentColor" class="w-6 h-6 transition duration-500 ease-in-out" viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <title>Меню</title>
                                 <path v-show="open" fill-rule="evenodd" clip-rule="evenodd"
@@ -48,27 +48,27 @@ const open = ref(false);
                 </Transition>
             </div>
             <nav class="w-full lg:w-auto mt-2 lg:flex lg:mt-0" :class="{ block: open, hidden: !open }">
-                <ul class="flex flex-col lg:flex-row lg:gap-3">
-                    <li v-for="item of menuitems">
-                        <LandingLink styleName="default" :to="item.path" @click="open = false"
-                            class="transition duration-500 ease-in-out flex lg:px-3 py-2 text-neutral-800 hover:text-lime-800">
-                            {{ item.title }}
-                        </LandingLink>
-                    </li>
-                    <li>
-                        <div class="lg:hidden flex items-center mt-3 gap-4">
-                            <LandingLink href="#" size="md" styleName="outline"
-                                class="flex lg:px-3 py-2 text-neutral-800 hover:text-lime-800 flex-row gap-2">
-                                <Icon name="social:cart" class="hover:fill-lime-800" /> Корзина
+                <div class="z-10">
+                    <ul class="flex flex-col lg:flex-row lg:gap-3">
+                        <li v-for="item of menuitems">
+                            <LandingLink styleName="default" :to="item.path" @click="open = false"
+                                class="transition duration-500 ease-in-out flex lg:px-3 py-2 text-neutral-800 hover:text-lime-800">
+                                {{ item.title }}
                             </LandingLink>
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                        <li>
+                            <LandingLink to="/cart/" styleName="default"
+                                class="lg:hidden transition duration-500 ease-in-out flex lg:px-3 py-2 text-neutral-800 hover:text-lime-800">
+                                Корзина
+                            </LandingLink>
+                        </li>
+                    </ul>
+                </div>
             </nav>
             <div>
                 <div class="hidden lg:flex items-center gap-4">
-                    <LandingLink href="#" size="md" styleName="outline" to="/cart">
-                        <Icon name="social:cart" width="25" height="25" />
+                    <LandingLink size="md" styleName="" to="/cart">
+                        <Icon name="social:cart" width="30" height="30" />
                     </LandingLink>
                 </div>
             </div>

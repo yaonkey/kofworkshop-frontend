@@ -45,18 +45,18 @@ const features = [
         <p class="text-lg mt-4 text-neutral-600">
             Мы создаем уникальные игрушки по запросу заказчика.
         </p>
-    </div>
 
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
-        <div v-for="item of features" class="flex gap-4 items-start">
-            <div class="mt-1 bg-neutral-800 rounded-full p-2 w-8 h-8 shrink-0">
-                <Icon class="text-neutral-100 bg-neutral-100" :name="item.icon" />
-            </div>
-            <div>
-                <h3 class="font-semibold text-neutral-800 text-lg">{{ item.title }}</h3>
-                <p class="text-neutral-600 mt-2 leading-relaxed">
-                    {{ item.description }}
-                </p>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+            <div v-for="item of features" class="flex gap-4 items-start">
+                <div class="mt-1 bg-neutral-800 rounded-full p-2 w-8 h-8 shrink-0">
+                    <Icon class="text-neutral-100 bg-neutral-100" :name="item.icon" />
+                </div>
+                <div>
+                    <h3 class="font-semibold text-neutral-800 text-lg">{{ item.title }}</h3>
+                    <p class="text-neutral-600 mt-2 leading-relaxed">
+                        {{ item.description }}
+                    </p>
+                </div>
             </div>
         </div>
     </div>
