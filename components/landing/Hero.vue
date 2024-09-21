@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <main class="flex px-2 lg:flex-cols-2 place-items-center pt-16 pb-8 md:pt-8 lg:h-screen">
+    <main class="flex px-2 lg:flex-cols-2 place-items-center pt-16 pb-8 md:pt-8">
         <div class="p-24 md:order-1 hidden md:block">
             <NuxtImg
                 class="rounded-full duration-700 ease-in-out transition-transform transform hover:rotate-6 scale-125"
