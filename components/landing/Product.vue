@@ -17,12 +17,12 @@ let img = useImage();
                 )
                     " />
             </div>
-            <div class="p-3 sm:p-5">
-                <h5 class="mb-2 text-lg md:text-2xl font-bold tracking-tight text-neutral-800">
+            <div class="p-2 sm:p-5">
+                <h5 class="mb-1 lg:mb-2 text-md md:text-2xl font-bold tracking-tight text-neutral-800">
                     <span>{{
                         product.title ?? "Без названия"
                     }}</span>
-                    <span class="text-lime-800 font-semibold text-xl hidden sm:block" v-if="
+                    <span class="text-lime-800 font-semibold text-sm md:text-xl hidden sm:block" v-if="
                         product.old_price &&
                         typeof product.old_price != 'undefined' &&
                         !isNaN(product.old_price)
@@ -33,7 +33,7 @@ let img = useImage();
                             )
                         }}%)</span>
                 </h5>
-                <p class="mb-3 text-lg font-medium text-neutral-700 flex gap-2 flex-wrap">
+                <p class="mb-1 lg:mb-3 text-md md:text-lg font-medium text-neutral-700 flex gap-1 lg:gap-2 flex-wrap">
                     <span v-if="
                         product.old_price &&
                         typeof product.old_price != 'undefined' &&
@@ -49,7 +49,7 @@ let img = useImage();
                         }}
                     </span>
                 </p>
-                <div class="hidden sm:block truncate mb-4 w-full font-normal text-neutral-500">
+                <div class="hidden sm:block truncate md-1 lg:mb-4 w-full font-normal text-neutral-500">
                     <span v-if="typeof product.description == 'string'">{{
                         product.description
                     }}</span>
@@ -57,7 +57,7 @@ let img = useImage();
                         }}<br />
                     </span>
                 </div>
-                <div class="w-full flex gap-2 flex-col lg:flex-row">
+                <div class="w-full flex gap-1 lg:gap-2 flex-col lg:flex-row">
                     <div class="flex w-full">
                         <LandingLink :to="product.id ? '/catalog/' + product.id : '#'" block>Заказать
                         </LandingLink>
