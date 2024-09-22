@@ -15,8 +15,9 @@ withDefaults(defineProps<Props>(), {
 });
 
 const sizes = {
-    lg: "px-5 py-2.5",
-    md: "px-4 py-2",
+    lg: "px-4 py-2 lg:px-5 lg:py-2.5",
+    md: "px-3 py-1.5 lg:px-4 lg:py-2",
+    sm: "px-2 py-1 lg:px-3 lg:py-1.5"
 };
 
 const styles = {
