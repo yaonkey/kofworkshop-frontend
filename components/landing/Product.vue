@@ -18,7 +18,7 @@ let img = useImage();
                     " />
             </div>
             <div class="p-2 sm:p-5">
-                <h5 class="mb-1 lg:mb-2 text-md md:text-2xl font-bold tracking-tight text-neutral-800">
+                <h5 class="mb-1 lg:mb-2 text-md md:text-2xl flex flex-row gap-1 font-bold tracking-tight text-neutral-800">
                     <span>{{
                         product.title ?? "Без названия"
                         }}</span>
@@ -49,7 +49,7 @@ let img = useImage();
                         }}
                     </span>
                 </p>
-                <div class="hidden sm:block truncate md-1 lg:mb-4 w-full font-normal text-neutral-500">
+                <div class="hidden text-start sm:block truncate md-1 lg:mb-4 w-full font-normal text-neutral-500">
                     <span v-if="typeof product.description == 'string'">{{
                         product.description
                         }}</span>
