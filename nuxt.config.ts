@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: "2024-04-03",
+  compatibilityDate: "2024-09-30",
   devtools: { enabled: true },
   vite: {
     build: {
@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
+          api: "modern",
           additionalData: '@use "~/assets/scss/_colors.scss" as *;',
         },
       },
@@ -36,32 +37,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: [
-    "@nuxtjs/tailwindcss",
-    "@nuxt/icon",
-    [
-      "@nuxtjs/google-fonts",
-      {
-        families: {
-          Roboto: true,
-          "Josefin+Sans": true,
-          Lato: [100, 300],
-          Raleway: {
-            wght: [100, 400],
-            ital: [100],
-          },
-          Inter: "200..700",
-          "Crimson Pro": {
-            wght: "200..900",
-            ital: "200..700",
-          },
-          "Exo 2": true,
-        },
-      },
-    ],
-    "@nuxt/fonts",
-    "@nuxt/image",
-  ],
+  modules: ["@nuxt/ui", "@nuxt/image"],
   icon: {
     size: "32px",
     customCollections: [
@@ -70,5 +46,5 @@ export default defineNuxtConfig({
         dir: './assets/icons/'
       }
     ]
-  }
+  },
 });

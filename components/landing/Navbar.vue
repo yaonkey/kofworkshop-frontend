@@ -87,6 +87,4 @@ const open = ref(false);
     transform: translateX(20px);
     opacity: 0;
 }
-
-.bg-background {}
 </style>

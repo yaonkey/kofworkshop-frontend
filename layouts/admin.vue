@@ -1,8 +1,7 @@
 <template>
+  <AdminNavbar></AdminNavbar>
   <AdminContainer>
-    <AdminNavbar></AdminNavbar>
     <slot></slot>
-    <AdminFooter></AdminFooter>
   </AdminContainer>
 </template>
 

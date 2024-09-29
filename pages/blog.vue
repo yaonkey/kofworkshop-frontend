@@ -21,8 +21,6 @@ fetch("/api/posts/post").then((response) => {
         news.push(text);
     })
 });
-
-console.log(news)
 </script>
 
 <template>
@@ -32,7 +30,7 @@ console.log(news)
             <template v-slot:desc>Хотите узнать, чем мы занимаемся?</template>
         </LandingSectionhead>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mx-auto max-w-4xl mt-16">
-            <LandingBlogNews v-for="one_news of news" :news="one_news" />
+            <BlogNews v-for="one_news of news" :news="one_news" />
         </div>
     </LandingContainer>
 </template>
