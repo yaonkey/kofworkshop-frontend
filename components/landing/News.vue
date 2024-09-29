@@ -7,33 +7,19 @@
             <LandingProduct v-if="status == 'success'" v-for="product of data.rows" :product="product" />
         </div>
         <div class="flex items-center justify-center mt-8">
-            <LandingLink
-                styleName="outline"
-                size="lg"
-                class="flex justify-center items-center text-lg rounded-xl"
-                href="/catalog"
-                rel="noopener"
-                >Хотите увидеть больше?</LandingLink
-            >
+            <LandingLink styleName="outline" size="lg" class="flex justify-center items-center text-lg rounded-xl"
+                href="/catalog" rel="noopener">Хотите увидеть больше?</LandingLink>
         </div>
     </div>
 </template>
 
 <script lang="ts" setup>
-import { useImage } from "#imports";
-
-let img = useImage();
-
 const { data, status } = useAsyncData(
     'products',
     () => $fetch('/api/products')
 );
 
 const router = useRouter();
-
-const goToProduct = (productNumber: number) => {
-    router.push(`/catalog/${productNumber}`);
-};
 </script>
 
 <style></style>
