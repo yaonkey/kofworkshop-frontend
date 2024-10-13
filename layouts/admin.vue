@@ -10,6 +10,9 @@
 useHead({
   title: "Админка | Kofworkshop",
 })
+definePageMeta({
+  middleware: 'auth',
+});
 </script>
 
 <style></style>

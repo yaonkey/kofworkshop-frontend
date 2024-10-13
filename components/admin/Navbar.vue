@@ -44,7 +44,11 @@ const menuitems = [
   {
     title: 'Игрушки',
     path: 'products',
-  }
+  },
+  {
+    title: 'Описания',
+    path: 'schemas',
+  },
 ];
 </script>
 
