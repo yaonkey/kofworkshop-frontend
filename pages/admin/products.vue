@@ -10,7 +10,7 @@
       </button>
     </div>
 
-    <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+    <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 w-full">
       <div v-for="toy in toys" :key="toy.id" class="border rounded-2xl p-4 bg-white shadow">
         <h3 class="text-lg font-bold text-neutral-800">ID: {{ toy.id }}</h3>
         <p class="text-neutral-800">Название: {{ toy.title }}</p>
