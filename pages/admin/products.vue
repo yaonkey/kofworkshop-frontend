@@ -10,39 +10,24 @@
       </button>
     </div>
 
-    <table class="min-w-full mt-6 border rounded-2xl border-gray-300 bg-white">
-      <thead>
-        <tr class="bg-gray-100">
-          <th class="border px-4 py-2 text-neutral-800">ID</th>
-          <th class="border px-4 py-2 text-neutral-800">Название</th>
-          <th class="border px-4 py-2 text-neutral-800">Старая цена</th>
-          <th class="border px-4 py-2 text-neutral-800">Цена</th>
-          <th class="border px-4 py-2 text-neutral-800">Тип</th>
-          <th class="border px-4 py-2 text-neutral-800">Доступность</th>
-          <th class="border px-4 py-2 text-neutral-800">Действия</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="toy in toys" :key="toy.id">
-          <td class="border px-4 py-2 text-neutral-800">{{ toy.id }}</td>
-          <td class="border px-4 py-2 text-neutral-800">{{ toy.title }}</td>
-          <td class="border px-4 py-2 text-neutral-800">{{ toy.old_price }} ₽</td>
-          <td class="border px-4 py-2 text-neutral-800">{{ toy.price }} ₽</td>
-          <td class="border px-4 py-2 text-neutral-800">{{ toy.type }}</td>
-          <td class="border px-4 py-2 text-neutral-800">{{ toy.is_available ? 'Да' : 'Нет' }}</td>
-          <td class="border px-4 py-2 text-neutral-800">
-            <div class="gap-2 flex">
-              <button class="bg-yellow-500 text-white px-2 py-1 rounded-2xl" @click="openEditToyModal(toy)">
-                Редактировать
-              </button>
-              <button class="bg-red-500 text-white px-2 py-1 rounded-2xl" @click="deleteToy(toy.id)">
-                Удалить
-              </button>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div v-for="toy in toys" :key="toy.id" class="border rounded-2xl p-4 bg-white shadow">
+        <h3 class="text-lg font-bold text-neutral-800">ID: {{ toy.id }}</h3>
+        <p class="text-neutral-800">Название: {{ toy.title }}</p>
+        <p class="text-neutral-800">Старая цена: {{ toy.old_price }} ₽</p>
+        <p class="text-neutral-800">Цена: {{ toy.price }} ₽</p>
+        <p class="text-neutral-800">Тип: {{ toy.type }}</p>
+        <p class="text-neutral-800">Доступность: {{ toy.is_available ? 'Да' : 'Нет' }}</p>
+        <div class="flex gap-2 mt-4">
+          <button class="bg-yellow-500 text-white px-2 py-1 rounded-2xl" @click="openEditToyModal(toy)">
+            Редактировать
+          </button>
+          <button class="bg-red-500 text-white px-2 py-1 rounded-2xl" @click="deleteToy(toy.id)">
+            Удалить
+          </button>
+        </div>
+      </div>
+    </div>
 
     <!-- Модальное окно для добавления/редактирования игрушки -->
     <div v-if="isModalOpen" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
