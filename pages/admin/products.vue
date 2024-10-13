@@ -18,11 +18,11 @@
         <p class="text-neutral-800">Цена: {{ toy.price }} ₽</p>
         <p class="text-neutral-800">Тип: {{ toy.type }}</p>
         <p class="text-neutral-800">Доступность: {{ toy.is_available ? 'Да' : 'Нет' }}</p>
-        <div class="flex gap-2 mt-4">
-          <button class="bg-yellow-500 text-white px-2 py-1 rounded-2xl" @click="openEditToyModal(toy)">
+        <div class="flex flex-col md:flex-row gap-2 mt-4">
+          <button class="bg-yellow-500 md:w-1/2  text-white px-2 py-1 rounded-2xl" @click="openEditToyModal(toy)">
             Редактировать
           </button>
-          <button class="bg-red-500 text-white px-2 py-1 rounded-2xl" @click="deleteToy(toy.id)">
+          <button class="bg-red-500 md:w-1/2 text-white px-2 py-1 rounded-2xl" @click="deleteToy(toy.id)">
             Удалить
           </button>
         </div>
