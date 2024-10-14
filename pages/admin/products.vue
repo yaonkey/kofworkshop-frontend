@@ -31,34 +31,40 @@
 
     <!-- Модальное окно для добавления/редактирования игрушки -->
     <div v-if="isModalOpen" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-      <div class="bg-white p-6 rounded-2xl shadow-lg">
+      <div class="bg-white p-6 rounded-2xl shadow-lg max-w-sm w-full mx-4">
         <h2 class="text-lg text-neutral-800 font-bold mb-4">{{ isEditing ? 'Редактировать игрушку' : 'Добавить игрушку'
           }}
         </h2>
         <form @submit.prevent="isEditing ? updateToy() : addToy()">
           <div class="mb-4">
             <label class="block mb-1 text-neutral-800">Название</label>
-            <input v-model="currentToy.title" type="text" class="border rounded-2xl w-full p-2 bg-white text-neutral-800" required />
+            <input v-model="currentToy.title" type="text"
+              class="border rounded-2xl w-full p-2 bg-white text-neutral-800" required />
           </div>
           <div class="mb-4">
             <label class="block mb-1 text-neutral-800">Старая цена</label>
-            <input v-model.number="currentToy.old_price" type="number" class="border rounded-2xl w-full p-2 bg-white text-neutral-800" required />
+            <input v-model.number="currentToy.old_price" type="number"
+              class="border rounded-2xl w-full p-2 bg-white text-neutral-800" required />
           </div>
           <div class="mb-4">
             <label class="block mb-1 text-neutral-800">Цена</label>
-            <input v-model.number="currentToy.price" type="number" class="border rounded-2xl w-full p-2 bg-white text-neutral-800" required />
+            <input v-model.number="currentToy.price" type="number"
+              class="border rounded-2xl w-full p-2 bg-white text-neutral-800" required />
           </div>
           <div class="mb-4">
             <label class="block mb-1 text-neutral-800">Описание</label>
-            <textarea v-model="currentToy.description" class="border rounded-2xl w-full p-2 bg-white text-neutral-800" required></textarea>
+            <textarea v-model="currentToy.description" class="border rounded-2xl w-full p-2 bg-white text-neutral-800"
+              required></textarea>
           </div>
           <div class="mb-4">
             <label class="block mb-1 text-neutral-800">Тип</label>
-            <input v-model="currentToy.type" type="text" class="border rounded-2xl w-full p-2 bg-white text-neutral-800" required />
+            <input v-model="currentToy.type" type="text" class="border rounded-2xl w-full p-2 bg-white text-neutral-800"
+              required />
           </div>
           <div class="mb-4">
             <label class="block mb-1 text-neutral-800">Файл</label>
-            <input v-model="currentToy.file" type="text" class="border rounded-2xl w-full p-2 bg-white text-neutral-800" />
+            <input v-model="currentToy.file" type="text"
+              class="border rounded-2xl w-full p-2 bg-white text-neutral-800" />
           </div>
           <div class="mb-4">
             <label class="block mb-1 text-neutral-800">Доступность</label>
@@ -66,11 +72,13 @@
             <span>Доступно</span>
           </div>
           <div class="flex justify-end">
-            <button type="button" class="bg-gray-300 text-neutral-800 px-4 py-2 rounded-2xl  mr-2" @click="closeModal">
+            <button type="button" class="bg-gray-300 text-neutral-800 px-4 py-2 rounded-2xl mr-2" @click="closeModal">
               Отмена
             </button>
-            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-2xl">
-              {{ isEditing ? 'Сохранить изменения' : 'Добавить игрушку' }}
+            <button type="submit"
+             :class="isEditing ? 'bg-blue-500' : 'bg-green-500'"
+            class="text-white px-4 py-2 rounded-2xl">
+              {{ isEditing ? 'Сохранить' : 'Добавить' }}
             </button>
           </div>
         </form>
