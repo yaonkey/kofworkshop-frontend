@@ -30,8 +30,8 @@
     </div>
 
     <!-- Модальное окно для добавления/редактирования игрушки -->
-    <div v-if="isModalOpen" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-      <div class="bg-white p-6 rounded-2xl shadow-lg max-w-sm w-full mx-4">
+    <div v-if="isModalOpen" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+      <div class="bg-white p-6 rounded-2xl shadow-lg max-w-sm w-full mx-4 overflow-y-auto max-h-[90vh]">
         <h2 class="text-lg text-neutral-800 font-bold mb-4">{{ isEditing ? 'Редактировать игрушку' : 'Добавить игрушку'
           }}
         </h2>
@@ -75,9 +75,8 @@
             <button type="button" class="bg-gray-300 text-neutral-800 px-4 py-2 rounded-2xl mr-2" @click="closeModal">
               Отмена
             </button>
-            <button type="submit"
-             :class="isEditing ? 'bg-blue-500' : 'bg-green-500'"
-            class="text-white px-4 py-2 rounded-2xl">
+            <button type="submit" :class="isEditing ? 'bg-blue-500 text-white' : 'bg-green-500 text-white'"
+              class="px-4 py-2 rounded-2xl">
               {{ isEditing ? 'Сохранить' : 'Добавить' }}
             </button>
           </div>

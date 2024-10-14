@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="bg-white/75 px-5 lg:px-7 sticky z-50 backdrop-blur top-0 flex flex-col lg:flex-row justify-between items-center pt-3 lg:py-1">
+    class="bg-white/75 px-5 lg:px-7 sticky z-30 backdrop-blur top-0 flex flex-col lg:flex-row justify-between items-center pt-3 lg:py-1">
     <div class="mx-auto flex max-w-7xl gap-3 flex-1 items-center justify-between font-light w-full">
       <a href="/admin" class="text-3xl lg:text-2xl logo-text">
         <span class="text-neutral-800">⚙️</span>
